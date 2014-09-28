@@ -1,0 +1,12 @@
+{
+  "root": "./",
+  "routes": {
+    "/": "start.html",
+    "/info": "home.html"
+  },
+  "clean_urls": true,
+  "cache_control": {
+    "/*": false,
+    "**/*.html": 600
+  }
+}

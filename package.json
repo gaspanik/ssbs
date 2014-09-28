@@ -1,0 +1,18 @@
+{
+  "name": "ssbs",
+  "version": "0.0.1",
+  "description": "SuperStatic w/ BrowserSync",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Masaaki Komori",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^1.5.1",
+    "gulp": "^3.8.8",
+    "gulp-load-plugins": "^0.6.0",
+    "superstatic": "^1.0.5"
+  }
+}
