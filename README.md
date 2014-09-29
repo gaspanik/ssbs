@@ -1,3 +1,3 @@
 # ssbs
 
-Superstatic w/ gulpjs
+SuperStatic through BrowserSync proxy mode demo.
