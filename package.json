@@ -1,6 +1,6 @@
 {
   "name": "ssbs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "SuperStatic w/ BrowserSync",
   "main": "index.js",
   "scripts": {
@@ -13,6 +13,7 @@
     "browser-sync": "^1.5.1",
     "gulp": "^3.8.8",
     "gulp-load-plugins": "^0.6.0",
+    "run-sequence": "^0.3.7",
     "superstatic": "^1.0.5"
   }
 }

@@ -1,18 +1,20 @@
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')({
-    pattern: ['gulp-*', 'gulp.*'],
-    replaceString: /\bgulp[\-.]/
-  });
+  pattern: ['gulp-*', 'gulp.*'],
+  replaceString: /\bgulp[\-.]/
+});
 var superstatic = require('superstatic');
 var browserSync = require('browser-sync');
+var runSequence = require('run-sequence');
 
-/*  Config for your environment */
+/*  Config for your environment to superstatic.json */
 
-ss = superstatic({
-  config:'superstatic.json'
+gulp.task('ss', function() {
+  new superstatic({
+    config: './superstatic.json'
+  })
+  .listen();
 });
-
-ss.listen();
 
 gulp.task('bs', function() {
   browserSync.init(null, {
@@ -23,4 +25,11 @@ gulp.task('bs', function() {
   });
 });
 
-gulp.task('default', ['bs']);
+gulp.task('server', function() {
+  runSequence(
+    'ss',
+    'bs'
+  );
+});
+
+gulp.task('default', ['server']);
